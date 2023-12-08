@@ -44,9 +44,9 @@ var randomNumber=Math.floor(Math.random()*4);
  var randomChoosenColor=buttonColor[randomNumber];
  gamePattern.push(randomChoosenColor);
  console.log(randomChoosenColor);
+ $("#"+randomChoosenColor).toggle();
+ setTimeout(()=>{ $("#"+randomChoosenColor).toggle();},100);
 
- $("#"+randomChoosenColor).fadeOut();
- $("#"+randomChoosenColor).fadeIn();
 playSound(randomChoosenColor);
 $("h2").text("Level "+level);
 level++;
@@ -61,11 +61,15 @@ $(".btn").click(function(event){
    checkAnswer();
 });
 var start=false;
-$(document).keydown(function (e) {
-    
+$(".circle").click(function (e) {
+    $(".circle").toggle();
+ setTimeout(()=>{ $(".circle").toggle();},50);
         if(start==false){
             start=true;
-        newSequence();
+            setTimeout(() => {
+                newSequence(); 
+              }, 300);
+        
         }
     
 });

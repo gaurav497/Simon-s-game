@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #27005D;
 }
 .head{
   font-family: 'Montserrat', sans-serif;
@@ -16,6 +16,7 @@ body {
 }
 
 .container {
+  position: relative;
   display: block;
   width: 0;
   margin: auto;
@@ -30,10 +31,12 @@ body {
 .btn {
  
   display: inline-block;
-  height: 11.25rem;
-  width: 11.25rem;
-  border: 10px solid black;
-  border-radius: 20%;
+  /* height: 11.25rem;
+  width: 11.25rem; */
+  height: 25vh;
+  width: 25vh;
+  border: 10px solid #27005D;
+  border-radius: 10%;
   
 }
 
@@ -74,9 +77,33 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+h3{
+  font-family: 'Montserrat', sans-serif;
+  margin: auto 0;
+  font-size: 2rem;
+   color: rgb(19, 19, 19);
+}
 .circle{
-  height: 10rem;
-  width: 10rem;
-  background-color: pink;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 20vh;
+  width: 20vh;
+  background-color: #fff;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+border: 10px solid #27005D;
+ 
+}
 
+.circle:hover{
+  opacity: 50%;
+  background-color: black;
+  color: white;
+}
+.circle h3:hover{
+  color: white;
 }
